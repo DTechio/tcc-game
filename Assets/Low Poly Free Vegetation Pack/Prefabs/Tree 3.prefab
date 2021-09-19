@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3873039402746434026}
   - component: {fileID: 3744553440909601823}
   - component: {fileID: 7406435371008340340}
-  - component: {fileID: 8007295522668815792}
+  - component: {fileID: 4631470347038464162}
   m_Layer: 0
   m_Name: Tree 3
   m_TagString: Untagged
@@ -55,10 +55,12 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b725cacc7387b1f4e991c4bdfcd832c8, type: 2}
+  - {fileID: 2100000, guid: 98c12d3c7e3522345b35ea60328b6674, type: 2}
   - {fileID: 2100000, guid: 9c0a1cda53d749f40a30a84ed1657377, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -80,8 +82,9 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &8007295522668815792
-MeshCollider:
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &4631470347038464162
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -90,7 +93,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -6206187328463476989, guid: 35d16cd66330b3d478844c42dfc1912a, type: 3}
+  m_Radius: 0.16
+  m_Height: 10.724198
+  m_Direction: 1
+  m_Center: {x: 0, y: 5.339934, z: 0}
