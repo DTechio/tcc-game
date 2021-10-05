@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class AxeTake : MonoBehaviour
 {
     public float TheDistance;
+    public AudioSource TakeAxeSound;
     public GameObject ActionText;
     public GameObject FakeAxe;
     public GameObject RealAxe;
@@ -37,6 +38,7 @@ public class AxeTake : MonoBehaviour
                 FakeAxe.SetActive(false);
                 AxeSwing.holdingAxe = true;
                 ActionText.SetActive(false);
+                TakeAxeSound.Play();
                 Destroy(gameObject);
             }
         }
