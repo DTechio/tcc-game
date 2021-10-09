@@ -5,7 +5,7 @@ using UnityEngine;
 public class AxeSwing : MonoBehaviour
 {
     public GameObject theAxe;
-    public bool isSwinging;
+    public static bool isSwinging;
     public AudioSource swingSound;
     public static bool holdingAxe = false;
 
