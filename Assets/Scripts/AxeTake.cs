@@ -39,6 +39,7 @@ public class AxeTake : MonoBehaviour
                 AxeSwing.holdingAxe = true;
                 ActionText.SetActive(false);
                 TakeAxeSound.Play();
+                DialogueState.stateAxeTake = true;
                 Destroy(gameObject);
             }
         }
