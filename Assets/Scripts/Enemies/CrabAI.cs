@@ -7,6 +7,8 @@ public class CrabAI : MonoBehaviour
 {
     public GameObject theCrab;
     public bool isAttacking = false;
+    public AudioSource attackSwing;
+    public AudioSource attackHit;
 
     void OnTriggerEnter(Collider other)
     {
@@ -33,9 +35,13 @@ public class CrabAI : MonoBehaviour
 
     IEnumerator TakeHealth()
     {
-        yield return new WaitForSeconds(0.75f);
+        yield return new WaitForSeconds(0.73f);
+        attackSwing.Play();
+        yield return new WaitForSeconds(0.02f);
         HealthMonitor.healthPoints -= 10;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.15f);
+        attackHit.Play();
+        yield return new WaitForSeconds(0.35f);
         isAttacking = false;
         theCrab.GetComponent<Animator>().Play("Armature|Walk_Cycle_1");
         theCrab.GetComponent<NavigationAI>().enabled = true;
