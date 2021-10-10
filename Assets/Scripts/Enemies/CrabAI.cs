@@ -33,8 +33,9 @@ public class CrabAI : MonoBehaviour
 
     IEnumerator TakeHealth()
     {
-        yield return new WaitForSeconds(1.15f);
+        yield return new WaitForSeconds(0.75f);
         HealthMonitor.healthPoints -= 10;
+        yield return new WaitForSeconds(0.5f);
         isAttacking = false;
         theCrab.GetComponent<Animator>().Play("Armature|Walk_Cycle_1");
         theCrab.GetComponent<NavigationAI>().enabled = true;
