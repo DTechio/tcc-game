@@ -7,6 +7,13 @@ public class GameOverOption : MonoBehaviour
 {
     public void RespawnPlayer()
     {
-        SceneManager.LoadScene(2);
+        //Respawn Scene
+        SceneManager.LoadScene(3);
+    }
+
+    public void MainMenu()
+    {
+        //Menu Scene
+        SceneManager.LoadScene(1);
     }
 }

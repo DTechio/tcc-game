@@ -8,6 +8,7 @@ public class Respawning : MonoBehaviour
     void Start()
     {
         HealthMonitor.healthPoints = 300;
-        SceneManager.LoadScene(1);
+        //Normal Game Scene
+        SceneManager.LoadScene(4);
     }
 }

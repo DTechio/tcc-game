@@ -18,7 +18,8 @@ public class HealthMonitor : MonoBehaviour
         healthBar.GetComponent<RectTransform>().sizeDelta = new Vector2(healthPoints, 30);
         if(healthPoints <= 0)
         {
-            SceneManager.LoadScene(0);
+            //GameOver Scene
+            SceneManager.LoadScene(2);
         }
     }
 }
