@@ -12,14 +12,17 @@ public class CrabAI : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (isAttacking == false)
+        if (other.tag != "Location" && other.tag == "Player")
         {
-            isAttacking = true; 
-            theCrab.GetComponent<Animator>().Play("Armature|Attack_1");
-            theCrab.GetComponent<NavigationAI>().enabled = false;
-            theCrab.GetComponent<NavMeshAgent>().enabled = false;
-            this.GetComponent<MeshCollider>().enabled = false;
-            StartCoroutine(TakeHealth());
+            if (isAttacking == false)
+            {
+                isAttacking = true;
+                theCrab.GetComponent<Animator>().Play("Armature|Attack_1");
+                theCrab.GetComponent<NavigationAI>().enabled = false;
+                theCrab.GetComponent<NavMeshAgent>().enabled = false;
+                this.GetComponent<MeshCollider>().enabled = false;
+                StartCoroutine(TakeHealth());
+            }
         }
     }
 

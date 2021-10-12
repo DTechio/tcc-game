@@ -7,6 +7,8 @@ public class NavigationAI : MonoBehaviour
 {
 	public GameObject theDestination;
 	NavMeshAgent theAgent;
+	public static bool canAttack;
+	public GameObject thePlayer;
 
 	void Start()
 	{
@@ -16,6 +18,13 @@ public class NavigationAI : MonoBehaviour
 
 	void Update()
 	{
-		theAgent.SetDestination(theDestination.transform.position);
+		if (canAttack == true)
+		{
+			theAgent.SetDestination(thePlayer.transform.position);
+		}
+		else
+		{
+			theAgent.SetDestination(theDestination.transform.position);
+		}
 	}
 }
