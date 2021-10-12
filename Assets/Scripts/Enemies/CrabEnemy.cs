@@ -22,6 +22,7 @@ public class CrabEnemy : MonoBehaviour
             this.GetComponent<NavMeshAgent>().enabled = false;
             this.GetComponent<BoxCollider>().enabled = false;
             attackObj.SetActive(false);
+            NPCChat.crabSlayed = true;
             StartCoroutine(Die());
         }
     }
