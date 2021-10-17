@@ -121,6 +121,7 @@ public class NPCChoice : MonoBehaviour
         this.GetComponent<Animator>().Play("Walk01");
         this.GetComponent<NavMeshAgent>().enabled = true;
         this.GetComponent<NPCAINav>().enabled = true;
+        Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         GameObject.Find("Main Camera").GetComponent<MouseLook>().enabled = true;
     }
