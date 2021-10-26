@@ -22,7 +22,6 @@ public class PauseControl : MonoBehaviour
         Time.timeScale = 0f;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
-
     }
 
     public void Resume()
@@ -43,5 +42,5 @@ public class PauseControl : MonoBehaviour
     {
         Application.Quit();
     }
-
+    // 00015
 }
