@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuFunction : MonoBehaviour
 {
+    public GameObject optMenu;
+    public GameObject loadMenu;
+
     public void NewGameButton()
     {
         //Respawn or Normal Game Scene
@@ -13,12 +16,28 @@ public class MainMenuFunction : MonoBehaviour
 
     public void LoadButton()
     {
-        //SceneManager.LoadScene(#);
+        if (loadMenu.activeSelf == false)
+        {
+            loadMenu.SetActive(true);
+            optMenu.SetActive(false);
+        }
+        else
+        {
+            loadMenu.SetActive(false);
+        }
     }
 
     public void OptionsButton()
     {
-        //UI for options to be built
+        if (optMenu.activeSelf == false)
+        {
+            optMenu.SetActive(true);
+            loadMenu.SetActive(false);
+        }
+        else
+        {
+            optMenu.SetActive(false);
+        }
     }
 
     public void QuitButton()
